@@ -8,21 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		CFA38AC42C4403DC00B18B64 /* BraceletsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */; };
-		CFA38AC62C4403DC00B18B64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AC52C4403DC00B18B64 /* ContentView.swift */; };
+		CFA38AC62C4403DC00B18B64 /* BraceletsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */; };
 		CFA38AC82C4403DF00B18B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA38AC72C4403DF00B18B64 /* Assets.xcassets */; };
 		CFA38ACB2C4403DF00B18B64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA38ACA2C4403DF00B18B64 /* Preview Assets.xcassets */; };
+		CFA38AD22C4404BA00B18B64 /* LGQAbscissae.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD12C4404BA00B18B64 /* LGQAbscissae.swift */; };
+		CFA38AD42C4405B700B18B64 /* LGQWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD32C4405B700B18B64 /* LGQWeights.swift */; };
+		CFA38AD62C44062900B18B64 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD52C44062900B18B64 /* CubicBezier.swift */; };
+		CFA38AD82C4410FD00B18B64 /* BraceletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD72C4410FD00B18B64 /* BraceletView.swift */; };
+		CFA38ADA2C44151600B18B64 /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD92C44151600B18B64 /* SFSymbol.swift */; };
+		CFA38ADC2C44165500B18B64 /* Bracelet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38ADB2C44165500B18B64 /* Bracelet.swift */; };
+		CFA38ADE2C451F1600B18B64 /* Array+NearestMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38ADD2C451F1600B18B64 /* Array+NearestMatch.swift */; };
+		CFA38AE62C45228D00B18B64 /* BraceletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AE52C45228D00B18B64 /* BraceletsTests.swift */; };
+		CFA38AED2C45AE7600B18B64 /* LayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AEC2C45AE7600B18B64 /* LayoutTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFA38AE72C45228D00B18B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFA38AB82C4403DC00B18B64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFA38ABF2C4403DC00B18B64;
+			remoteInfo = Bracelets;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CFA38AC02C4403DC00B18B64 /* Bracelets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bracelets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsApp.swift; sourceTree = "<group>"; };
-		CFA38AC52C4403DC00B18B64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsView.swift; sourceTree = "<group>"; };
 		CFA38AC72C4403DF00B18B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA38ACA2C4403DF00B18B64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFA38AD12C4404BA00B18B64 /* LGQAbscissae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGQAbscissae.swift; sourceTree = "<group>"; };
+		CFA38AD32C4405B700B18B64 /* LGQWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGQWeights.swift; sourceTree = "<group>"; };
+		CFA38AD52C44062900B18B64 /* CubicBezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		CFA38AD72C4410FD00B18B64 /* BraceletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletView.swift; sourceTree = "<group>"; };
+		CFA38AD92C44151600B18B64 /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
+		CFA38ADB2C44165500B18B64 /* Bracelet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bracelet.swift; sourceTree = "<group>"; };
+		CFA38ADD2C451F1600B18B64 /* Array+NearestMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NearestMatch.swift"; sourceTree = "<group>"; };
+		CFA38AE32C45228C00B18B64 /* BraceletsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraceletsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA38AE52C45228D00B18B64 /* BraceletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsTests.swift; sourceTree = "<group>"; };
+		CFA38AEC2C45AE7600B18B64 /* LayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CFA38ABD2C4403DC00B18B64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA38AE02C45228C00B18B64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA38AC22C4403DC00B18B64 /* Bracelets */,
+				CFA38AE42C45228C00B18B64 /* BraceletsTests */,
 				CFA38AC12C4403DC00B18B64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA38AC02C4403DC00B18B64 /* Bracelets.app */,
+				CFA38AE32C45228C00B18B64 /* BraceletsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,7 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */,
-				CFA38AC52C4403DC00B18B64 /* ContentView.swift */,
+				CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */,
+				CFA38AD72C4410FD00B18B64 /* BraceletView.swift */,
+				CFA38ADD2C451F1600B18B64 /* Array+NearestMatch.swift */,
+				CFA38ADB2C44165500B18B64 /* Bracelet.swift */,
+				CFA38AD92C44151600B18B64 /* SFSymbol.swift */,
+				CFA38AD12C4404BA00B18B64 /* LGQAbscissae.swift */,
+				CFA38AD52C44062900B18B64 /* CubicBezier.swift */,
+				CFA38AD32C4405B700B18B64 /* LGQWeights.swift */,
 				CFA38AC72C4403DF00B18B64 /* Assets.xcassets */,
 				CFA38AC92C4403DF00B18B64 /* Preview Content */,
 			);
@@ -65,6 +110,15 @@
 				CFA38ACA2C4403DF00B18B64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFA38AE42C45228C00B18B64 /* BraceletsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFA38AE52C45228D00B18B64 /* BraceletsTests.swift */,
+				CFA38AEC2C45AE7600B18B64 /* LayoutTest.swift */,
+			);
+			path = BraceletsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +141,24 @@
 			productReference = CFA38AC02C4403DC00B18B64 /* Bracelets.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CFA38AE22C45228C00B18B64 /* BraceletsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA38AE92C45228D00B18B64 /* Build configuration list for PBXNativeTarget "BraceletsTests" */;
+			buildPhases = (
+				CFA38ADF2C45228C00B18B64 /* Sources */,
+				CFA38AE02C45228C00B18B64 /* Frameworks */,
+				CFA38AE12C45228C00B18B64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFA38AE82C45228D00B18B64 /* PBXTargetDependency */,
+			);
+			name = BraceletsTests;
+			productName = BraceletsTests;
+			productReference = CFA38AE32C45228C00B18B64 /* BraceletsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +171,10 @@
 				TargetAttributes = {
 					CFA38ABF2C4403DC00B18B64 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					CFA38AE22C45228C00B18B64 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CFA38ABF2C4403DC00B18B64;
 					};
 				};
 			};
@@ -116,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				CFA38ABF2C4403DC00B18B64 /* Bracelets */,
+				CFA38AE22C45228C00B18B64 /* BraceletsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFA38AE12C45228C00B18B64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +221,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA38AC62C4403DC00B18B64 /* ContentView.swift in Sources */,
+				CFA38ADE2C451F1600B18B64 /* Array+NearestMatch.swift in Sources */,
+				CFA38ADA2C44151600B18B64 /* SFSymbol.swift in Sources */,
+				CFA38AD62C44062900B18B64 /* CubicBezier.swift in Sources */,
+				CFA38AD22C4404BA00B18B64 /* LGQAbscissae.swift in Sources */,
+				CFA38ADC2C44165500B18B64 /* Bracelet.swift in Sources */,
+				CFA38AD82C4410FD00B18B64 /* BraceletView.swift in Sources */,
+				CFA38AC62C4403DC00B18B64 /* BraceletsView.swift in Sources */,
+				CFA38AD42C4405B700B18B64 /* LGQWeights.swift in Sources */,
 				CFA38AC42C4403DC00B18B64 /* BraceletsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFA38ADF2C45228C00B18B64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA38AE62C45228D00B18B64 /* BraceletsTests.swift in Sources */,
+				CFA38AED2C45AE7600B18B64 /* LayoutTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFA38AE82C45228D00B18B64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFA38ABF2C4403DC00B18B64 /* Bracelets */;
+			targetProxy = CFA38AE72C45228D00B18B64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CFA38ACC2C4403DF00B18B64 /* Debug */ = {
@@ -322,6 +430,42 @@
 			};
 			name = Release;
 		};
+		CFA38AEA2C45228D00B18B64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RLT3Y7VWF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulpatterson.BraceletsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bracelets.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bracelets";
+			};
+			name = Debug;
+		};
+		CFA38AEB2C45228D00B18B64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RLT3Y7VWF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulpatterson.BraceletsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bracelets.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bracelets";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +483,15 @@
 			buildConfigurations = (
 				CFA38ACF2C4403DF00B18B64 /* Debug */,
 				CFA38AD02C4403DF00B18B64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFA38AE92C45228D00B18B64 /* Build configuration list for PBXNativeTarget "BraceletsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA38AEA2C45228D00B18B64 /* Debug */,
+				CFA38AEB2C45228D00B18B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

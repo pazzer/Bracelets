@@ -11,7 +11,7 @@ import SwiftUI
 struct BraceletsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Text("ContentView?")
         }
     }
 }
