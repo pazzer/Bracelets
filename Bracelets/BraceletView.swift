@@ -63,31 +63,56 @@ struct BraceletView: View {
     
     struct Preview: View {
         
-        let cubicBezier = CubicBezier(
+        let snakePath = CubicBezier(
                 start: .init(x: 0.024, y: 1 - 0.357),
                 end: .init(x: 0.973, y: 1 - 0.63),
                 controlPoint1: .init(x: 0.127, y: 1 - 0.824),
                 controlPoint2: .init(x: 0.944, y: 1 - 0.05))
         
+        let headUp = CubicBezier(
+            start: CGPoint(x: 0.05, y: 1 - 0.46),
+            end: CGPoint(x: 0.96, y: 1 - 0.548),
+            controlPoint1: CGPoint(x: 0.593, y: 1 - 0.533),
+            controlPoint2: CGPoint(x: 0.775, y: 1 - 0.31))
         
-        let bracelet = Bracelet("Good Looking", color: .brown)
+        let linePath = CubicBezier(
+            start: CGPoint(x: 0.05, y: 1 - 0.5),
+            end: CGPoint(x: 0.95, y: 1 - 0.5),
+            controlPoint1: CGPoint(x: 0.05, y: 1 - 0.5),
+            controlPoint2: CGPoint(x: 0.95, y: 1 - 0.5))
+        
+        let rightDip = CubicBezier(
+            start: CGPoint(x: 0.057, y: 1 - 0.532),
+            end: CGPoint(x: 0.95, y: 1 - 0.5),
+            controlPoint1: CGPoint(x: 0.616, y: 1 - 0.516),
+            controlPoint2: CGPoint(x: 0.838, y: 1 - 0.353))
+        
+        let leftDip = CubicBezier(
+            start: CGPoint(x: 0.057, y: 1 - 0.51),
+            end: CGPoint(x: 0.95, y: 1 - 0.5),
+            controlPoint1: CGPoint(x: 0.264, y: 1 - 0.581),
+            controlPoint2: CGPoint(x: 0.271, y: 1 - 0.466))
+        
+        let prima = Bracelet("Prima!", color: .brown)
+        let trouble = Bracelet("trouble!", color: .black)
+        let quitter = Bracelet("quitter", color: .blue)
         
         var body: some View {
             
             
             VStack {
-                BraceletView(bracelet: bracelet, pathLayout: PathLayout(path: cubicBezier))
-                    .aspectRatio(1.5, contentMode: .fit)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(.yellow)
-                    )
-                BraceletView(bracelet: bracelet, pathLayout: PathLayout(path: cubicBezier))
-                    .aspectRatio(1.5, contentMode: .fit)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(.yellow)
-                    )
+                Group {
+                    BraceletView(bracelet: prima, pathLayout: PathLayout(path: snakePath))
+                    BraceletView(bracelet: trouble, pathLayout: PathLayout(path: headUp))
+                    BraceletView(bracelet: quitter, pathLayout: PathLayout(path: leftDip))
+                }
+                .aspectRatio(1.5, contentMode: .fit)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(.yellow)
+                )
+                
+                    
             }
             .padding()
             
