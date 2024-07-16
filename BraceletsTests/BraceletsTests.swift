@@ -72,5 +72,9 @@ final class BraceletsTests: XCTestCase {
         index = try XCTUnwrap(ints.indexOfNearestMatch(90, matchRule: .firstAbove))
         XCTAssertEqual(index, 20)
     }
+    
+    func testOther() throws {
+        
+    }
 
 }

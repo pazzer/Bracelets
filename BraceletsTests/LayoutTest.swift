@@ -1039,7 +1039,9 @@ final class LayoutTest: XCTestCase {
             return arcLengths.indexOfNearestMatch(d, matchRule: .closest)
         }
         
-        print(spaced.compactMap({$0}))
+        
+        
+        
         
 
         

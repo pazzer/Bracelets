@@ -88,7 +88,14 @@ struct CubicBezier {
         return .init(dx: dx(at: t), dy: dy(at: t))
     }
     
-    
+    func scaled(by num: Num) -> CubicBezier {
+        .init(
+            start: start.scaled(by: num),
+            end: end.scaled(by: num),
+            controlPoint1: controlPoint1.scaled(by: num),
+            controlPoint2: controlPoint2.scaled(by: num)
+        )
+    }
 }
 
 
@@ -131,24 +138,11 @@ extension CubicBezier {
     }
     
     func bezierPath() -> UIBezierPath {
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         path.move(to: start)
         path.addCurve(to: end, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
         return path
     }
 }
 
-//extension CubicBezier {
-//    
-//    static let ex1 = CubicBezier(from: [])
-//    
-//    
-//}
-//
-//enum BezierCurve {
-//    
-//    case
-//
-//}
-//
-//
+

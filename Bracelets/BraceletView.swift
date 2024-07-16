@@ -13,38 +13,36 @@ struct BraceletView: View {
     
     let bracelet: Bracelet
     
-    /// a CublicBezier instance that represents a *normalized* cubic bezier path.
-    let path: CubicBezier
+    let pathLayout: PathLayout
     
     var body: some View {
         GeometryReader { gp in
             let rect = gp.frame(in: .local)
+            let items = pathLayout.update(
+                forScale: Int(rect.width),
+                itemCount: bracelet.beads.count,
+                padding: 0.2)
             path(in: rect)
                 .stroke(style: .init(lineWidth: 4.0, lineCap: .round))
-            ForEach([(0, 100), (1, 236), (2, 351), (3, 452), (4, 551), (5, 658), (6, 786), (7, 919)], id: \.self.0) { (ii, int) in
-                let t = Double(int) / 1000.0
-                let p = path.point(at: t)
-                let x = p.x * rect.width
-                let y = p.y * rect.width
-                let xAngle = path.xAngle(at: t, in: .degrees)
-                beadView(bracelet.beads[ii])
-                    .frame(width: 36, height: 36)
-                    .rotationEffect(.init(degrees: xAngle.value))
-                    .position(x: x, y: y)
-                    
-                
+            ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
+                beadView(bracelet.beads[index])
+                    .frame(width: item.diameter, height: item.diameter)
+                    .rotationEffect(.init(degrees: item.rotation.value))
+                    .position(x: item.position.x, y: item.position.y - ((rect.width - rect.height) / 2))
             }
         }
         .padding()
+        
     }
     
     func path(in rect: CGRect) -> Path {
+        let path = pathLayout.path.bezierPath()
         
-        let multiplier = min(rect.width, rect.height)
-        let scale = CGAffineTransform(scaleX: multiplier, y: multiplier)
-        
-        let path = path.bezierPath()
+        let scale = CGAffineTransform(scaleX: rect.width, y: rect.width)
         path.apply(scale)
+        
+        let transform = CGAffineTransform(translationX: 0, y:  -((rect.width - rect.height) / 2))
+        path.apply(transform)
         
         return Path(path.cgPath)
     }
@@ -72,27 +70,32 @@ struct BraceletView: View {
                 controlPoint2: .init(x: 0.944, y: 1 - 0.05))
         
         
-        let bracelet = Bracelet("I love dogs", color: .brown)
+        let bracelet = Bracelet("Good Looking", color: .brown)
         
         var body: some View {
             
+            
             VStack {
-                BraceletView(bracelet: bracelet, path: cubicBezier)
-                    .aspectRatio(1, contentMode: .fit)
+                BraceletView(bracelet: bracelet, pathLayout: PathLayout(path: cubicBezier))
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(
-                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                        .fill(.yellow))
-                BraceletView(bracelet: bracelet, path: cubicBezier)
-                    .aspectRatio(1, contentMode: .fit)
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(.yellow)
+                    )
+                BraceletView(bracelet: bracelet, pathLayout: PathLayout(path: cubicBezier))
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(
-                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                        .fill(.yellow))
-                
-                
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(.yellow)
+                    )
             }
+            .padding()
+            
             
         }
     }
     
     return Preview()
 }
+
+
