@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CFA38AC42C4403DC00B18B64 /* BraceletsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */; };
-		CFA38AC62C4403DC00B18B64 /* BraceletsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */; };
 		CFA38AC82C4403DF00B18B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA38AC72C4403DF00B18B64 /* Assets.xcassets */; };
 		CFA38ACB2C4403DF00B18B64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA38ACA2C4403DF00B18B64 /* Preview Assets.xcassets */; };
 		CFA38AD22C4404BA00B18B64 /* LGQAbscissae.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AD12C4404BA00B18B64 /* LGQAbscissae.swift */; };
@@ -22,6 +21,7 @@
 		CFA38AED2C45AE7600B18B64 /* LayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AEC2C45AE7600B18B64 /* LayoutTest.swift */; };
 		CFA38AEF2C46682200B18B64 /* CGPoint+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AEE2C46682100B18B64 /* CGPoint+Scale.swift */; };
 		CFA38AF12C466D0600B18B64 /* PathLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38AF02C466D0500B18B64 /* PathLayout.swift */; };
+		CFA38B142C4812BA00B18B64 /* BraceletGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA38B132C4812B900B18B64 /* BraceletGallery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		CFA38AC02C4403DC00B18B64 /* Bracelets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bracelets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsApp.swift; sourceTree = "<group>"; };
-		CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsView.swift; sourceTree = "<group>"; };
 		CFA38AC72C4403DF00B18B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA38ACA2C4403DF00B18B64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFA38AD12C4404BA00B18B64 /* LGQAbscissae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGQAbscissae.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		CFA38AEC2C45AE7600B18B64 /* LayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTest.swift; sourceTree = "<group>"; };
 		CFA38AEE2C46682100B18B64 /* CGPoint+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Scale.swift"; sourceTree = "<group>"; };
 		CFA38AF02C466D0500B18B64 /* PathLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathLayout.swift; sourceTree = "<group>"; };
+		CFA38B132C4812B900B18B64 /* BraceletGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletGallery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA38AC32C4403DC00B18B64 /* BraceletsApp.swift */,
-				CFA38AC52C4403DC00B18B64 /* BraceletsView.swift */,
 				CFA38AD72C4410FD00B18B64 /* BraceletView.swift */,
+				CFA38B132C4812B900B18B64 /* BraceletGallery.swift */,
 				CFA38AF02C466D0500B18B64 /* PathLayout.swift */,
 				CFA38ADD2C451F1600B18B64 /* Array+NearestMatch.swift */,
 				CFA38ADB2C44165500B18B64 /* Bracelet.swift */,
@@ -231,11 +231,11 @@
 				CFA38ADE2C451F1600B18B64 /* Array+NearestMatch.swift in Sources */,
 				CFA38ADA2C44151600B18B64 /* SFSymbol.swift in Sources */,
 				CFA38AD62C44062900B18B64 /* CubicBezier.swift in Sources */,
+				CFA38B142C4812BA00B18B64 /* BraceletGallery.swift in Sources */,
 				CFA38AD22C4404BA00B18B64 /* LGQAbscissae.swift in Sources */,
 				CFA38ADC2C44165500B18B64 /* Bracelet.swift in Sources */,
 				CFA38AEF2C46682200B18B64 /* CGPoint+Scale.swift in Sources */,
 				CFA38AD82C4410FD00B18B64 /* BraceletView.swift in Sources */,
-				CFA38AC62C4403DC00B18B64 /* BraceletsView.swift in Sources */,
 				CFA38AD42C4405B700B18B64 /* LGQWeights.swift in Sources */,
 				CFA38AC42C4403DC00B18B64 /* BraceletsApp.swift in Sources */,
 			);

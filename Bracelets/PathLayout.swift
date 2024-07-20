@@ -8,10 +8,10 @@
 import Foundation
 
 
-
 class PathLayout {
     
-
+    static let kArcLengthDivisions = 1000
+    
     struct Item {
         
         let diameter: CGFloat
@@ -22,7 +22,7 @@ class PathLayout {
     
     private(set) var path: CubicBezier
     
-    private var arcLengths: [Double]
+    private let arcLengths: [Double]
     
     private var arcLength: CGFloat {
         arcLengths.last!
@@ -30,26 +30,28 @@ class PathLayout {
     
     init(path: CubicBezier) {
         self.path = path
-        self.arcLengths = Array(0...1000).map { t in
-            return path.arcLength(to: Double(t) / 1000)
+        self.arcLengths = Array(0...Self.kArcLengthDivisions).map { t in
+            return path.arcLength(to: Double(t) / Double(Self.kArcLengthDivisions))
         }
     }
 
     typealias Percent = CGFloat
     
-    func update(forScale scale: Int, itemCount: Int, padding: Percent) -> [Item] {
+    func layout(forScale scale: Int, itemCount: Int, padding: Percent) -> [Item] {
         let available = arcLength * (1 - padding)
         let interval = available / Double(itemCount - 1)
         let start = arcLength * (padding / 2)
         let diameter = ((available * CGFloat(scale)) / Double(itemCount))
+        let divisions = Double(Self.kArcLengthDivisions)
         
         return Array(0..<itemCount).compactMap { ii in
             let distance = start + Double(ii) * interval
             return arcLengths.indexOfNearestMatch(distance, matchRule: .closest)
         }.map { t in
-            Item(diameter: diameter,
-                 position: path.point(at: Double(t) / 1000).scaled(by: CGFloat(scale)),
-                 rotation: path.xAngle(at: Double(t) / 1000, in: .degrees))
+            Item(
+                diameter: diameter,
+                position: path.point(at: Double(t) / divisions).scaled(by: CGFloat(scale)),
+                rotation: path.xAngle(at: Double(t) / divisions, in: .degrees))
         }
     }
     

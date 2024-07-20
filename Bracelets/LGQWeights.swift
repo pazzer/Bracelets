@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// These values come from https://pomax.github.io/bezierinfo/legendre-gauss.html
-/// ('lgq' stands for Legendre-Gauss quadrature.)
+/// These values are from https://pomax.github.io/bezierinfo/legendre-gauss.html
+/// ('lgq' == Legendre-Gauss quadrature.)
 
 let lgqWeights: [Int: [Double]] =
 [

@@ -145,4 +145,85 @@ extension CubicBezier {
     }
 }
 
+extension CubicBezier {
+    
+    static let a = CubicBezier(
+        start: .init(x: 0.024, y: 1 - 0.357),
+        end: .init(x: 0.973, y: 1 - 0.63),
+        controlPoint1: .init(x: 0.127, y: 1 - 0.824),
+        controlPoint2: .init(x: 0.944, y: 1 - 0.05))
+    
+    static let b = CubicBezier(
+        start: CGPoint(x: 0.05, y: 1 - 0.46),
+        end: CGPoint(x: 0.96, y: 1 - 0.548),
+        controlPoint1: CGPoint(x: 0.593, y: 1 - 0.533),
+        controlPoint2: CGPoint(x: 0.775, y: 1 - 0.31))
+    
+    static let c = CubicBezier(
+        start: CGPoint(x: 0.05, y: 1 - 0.5),
+        end: CGPoint(x: 0.95, y: 1 - 0.5),
+        controlPoint1: CGPoint(x: 0.05, y: 1 - 0.5),
+        controlPoint2: CGPoint(x: 0.95, y: 1 - 0.5))
+    
+    static let d = CubicBezier(
+        start: CGPoint(x: 0.057, y: 1 - 0.532),
+        end: CGPoint(x: 0.95, y: 1 - 0.5),
+        controlPoint1: CGPoint(x: 0.616, y: 1 - 0.516),
+        controlPoint2: CGPoint(x: 0.838, y: 1 - 0.353))
+    
+    static let e = CubicBezier(
+        start: CGPoint(x: 0.057, y: 1 - 0.51),
+        end: CGPoint(x: 0.95, y: 1 - 0.5),
+        controlPoint1: CGPoint(x: 0.264, y: 1 - 0.581),
+        controlPoint2: CGPoint(x: 0.271, y: 1 - 0.466))
+    
+    static let f = CubicBezier(
+        start: .init(x: 0.05, y: 1 - 0.51),
+        end: .init(x: 0.95, y: 1 - 0.496),
+        controlPoint1: .init(x: 0.26, y: 1 - 0.297),
+        controlPoint2: .init(x: 0.433, y: 1 - 0.644))
+    
+    static let g = CubicBezier(
+        start: .init(x: 0.05, y: 1 - 0.57),
+        end: .init(x: 0.95, y: 1 - 0.496),
+        controlPoint1: .init(x: 0.27, y: 1 - 0.32),
+        controlPoint2: .init(x: 0.76, y: 1 - 0.6))
+
+    static let h = CubicBezier(
+        start: .init(x: 0.05, y: 1 - 0.476),
+        end: .init(x: 0.946, y: 1 - 0.46),
+        controlPoint1: .init(x: 0.376, y: 1 - 0.776),
+        controlPoint2: .init(x: 0.786, y: 1 - 0.386))
+
+    static let i = CubicBezier(
+        start: .init(x: 0.05, y: 1 - 0.476),
+        end: .init(x: 0.94, y: 1 - 0.51),
+        controlPoint1: .init(x: 0.393, y: 1 - 0.36),
+        controlPoint2: .init(x: 0.786, y: 1 - 0.4))
+
+    static let j = CubicBezier(
+        start: .init(x: 0.06, y: 1 - 0.514),
+        end: .init(x: 0.94, y: 1 - 0.51),
+        controlPoint1: .init(x: 0.764, y: 1 - 0.59),
+        controlPoint2: .init(x: 0.348, y: 1 - 0.367))
+
+    static let k = CubicBezier(
+        start: .init(x: 0.06, y: 1 - 0.514),
+        end: .init(x: 0.94, y: 1 - 0.51),
+        controlPoint1: .init(x: 0.316, y: 1 - 0.703),
+        controlPoint2: .init(x: 0.954, y: 1 - 0.376))
+    
+    static let l = CubicBezier(
+        start: .init(x: 0.06, y: 1 - 0.514),
+        end: .init(x: 0.96, y: 1 - 0.437),
+        controlPoint1: .init(x: 0.4, y: 1 - 0.533),
+        controlPoint2: .init(x: 0.71, y: 1 - 0.67))
+    
+    
+    static let examples = [CubicBezier.a, .b, .c, .d, .e, .f, .g, .h, .i, .j, .k, .l]
+    
+    
+    
+}
+
 

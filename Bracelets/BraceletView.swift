@@ -18,19 +18,23 @@ struct BraceletView: View {
     var body: some View {
         GeometryReader { gp in
             let rect = gp.frame(in: .local)
-            let items = pathLayout.update(
+            let yOffset = (rect.width - rect.height) / 2
+            
+            let items = pathLayout.layout(
                 forScale: Int(rect.width),
                 itemCount: bracelet.beads.count,
                 padding: 0.2)
+            
             path(in: rect)
-                .stroke(style: .init(lineWidth: 4.0, lineCap: .round))
+                .stroke(bracelet.strapColor, style: .init(lineWidth: 4.0, lineCap: .round))
             ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
                 beadView(bracelet.beads[index])
                     .frame(width: item.diameter, height: item.diameter)
                     .rotationEffect(.init(degrees: item.rotation.value))
-                    .position(x: item.position.x, y: item.position.y - ((rect.width - rect.height) / 2))
+                    .position(x: item.position.x, y: item.position.y - yOffset)
             }
         }
+        .aspectRatio(1.625, contentMode: .fill)
         .padding()
         
     }
@@ -41,8 +45,8 @@ struct BraceletView: View {
         let scale = CGAffineTransform(scaleX: rect.width, y: rect.width)
         path.apply(scale)
         
-        let transform = CGAffineTransform(translationX: 0, y:  -((rect.width - rect.height) / 2))
-        path.apply(transform)
+        let translation = CGAffineTransform(translationX: 0, y:  -((rect.width - rect.height) / 2))
+        path.apply(translation)
         
         return Path(path.cgPath)
     }
@@ -52,8 +56,12 @@ struct BraceletView: View {
         Image(systemName: bead.symbol.rawValue)
             .resizable()
             .foregroundStyle(bead.color.opacity(1))
-            .symbolRenderingMode(.multicolor)
             .fontWeight(.bold)
+            .background(
+                Circle()
+                    .fill(.white)
+            )
+            
     }
 }
 
@@ -93,20 +101,20 @@ struct BraceletView: View {
             controlPoint1: CGPoint(x: 0.264, y: 1 - 0.581),
             controlPoint2: CGPoint(x: 0.271, y: 1 - 0.466))
         
-        let prima = Bracelet("Prima!", color: .brown)
-        let trouble = Bracelet("trouble!", color: .black)
-        let quitter = Bracelet("quitter", color: .blue)
+        let prima = Bracelet("Prima!", design: .singleColor(.brown))
+        let trouble = Bracelet("trouble!", design: .singleColor(.black))
+        let quitter = Bracelet("quitter", design: .singleColor(.blue))
         
         var body: some View {
             
             
             VStack {
+                
                 Group {
-                    BraceletView(bracelet: prima, pathLayout: PathLayout(path: snakePath))
-                    BraceletView(bracelet: trouble, pathLayout: PathLayout(path: headUp))
-                    BraceletView(bracelet: quitter, pathLayout: PathLayout(path: leftDip))
+                    BraceletView(bracelet: .a, pathLayout: PathLayout(path: snakePath))
+                    BraceletView(bracelet: .d, pathLayout: PathLayout(path: headUp))
+                    BraceletView(bracelet: .n, pathLayout: PathLayout(path: CubicBezier.k))
                 }
-                .aspectRatio(1.5, contentMode: .fit)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
                         .fill(.yellow)
@@ -122,5 +130,6 @@ struct BraceletView: View {
     
     return Preview()
 }
+
 
 
