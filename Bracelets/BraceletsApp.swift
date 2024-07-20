@@ -11,7 +11,11 @@ import SwiftUI
 struct BraceletsApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("ContentView?")
+            NavigationStack {
+                BraceletGallery()
+                    .navigationTitle("Bracelets")
+                    .navigationBarTitleDisplayMode(.large)
+            }
         }
     }
 }

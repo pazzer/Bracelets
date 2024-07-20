@@ -11,8 +11,7 @@ import SwiftUI
 
 struct BraceletGallery: View {
     
-    
-    var bracelets = {
+    var braceletData: [(bracelet: Bracelet, layoutPath: PathLayout)] = {
         let paths = CubicBezier.examples
         return Bracelet.examples.enumerated().map { ii, bracelet in
             let path = paths[ii % paths.count]
@@ -21,18 +20,24 @@ struct BraceletGallery: View {
         }
     }()
     
-    
-    
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack {
                 LazyVGrid(columns: [.init(), .init()], content: {
-                    ForEach(Array(zip(bracelets.indices, bracelets)), id: \.0) { index, bracelet in
-                        BraceletView(bracelet: bracelet.0, pathLayout: bracelet.1)
-                            .background(
-                                RoundedRectangle(cornerRadius: 6)
-                                    .fill(Color(white: 0.935))
-                            )
+                    ForEach(Array(zip(braceletData.indices, braceletData)), id: \.0) { index, item in
+                        NavigationLink {
+                            BraceletView(
+                                bracelet: item.bracelet,
+                                layoutPath: item.layoutPath)
+                        } label: {
+                            BraceletView(
+                                bracelet: item.bracelet,
+                                layoutPath: item.layoutPath)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 6)
+                                        .fill(Color(white: 0.935))
+                                )
+                        }
                     }
                 })
                 
@@ -49,13 +54,16 @@ struct BraceletGallery: View {
 
 
 
-#Preview("Bracelet Gallery") {
+#Preview("Bracelet Gallery", traits: .portrait) {
     
     struct Preview: View {
-        
 
         var body: some View {
-            BraceletGallery()
+            NavigationStack {
+                BraceletGallery()
+                    .navigationTitle("Bracelets")
+                    .navigationBarTitleDisplayMode(.large)
+            }
         }
     }
     
