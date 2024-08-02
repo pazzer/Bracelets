@@ -234,8 +234,3 @@ extension SFSymbol {
     
     
 }
-
-//tortoise.circle.fill
-//hare.circle.fill
-//airplane.circle.fill
-//binoculars.circle.fill

@@ -15,7 +15,6 @@ struct Bracelet: Identifiable {
         lhs.id == rhs.id
     }
     
-    
     enum Design {
         case monochrome(_: Color)
         case bichrome(color1: Color, color2: Color, interval: Int)
@@ -82,7 +81,6 @@ struct Bracelet: Identifiable {
 
 
 extension Color {
-    
     func withSaturation(_ saturation: CGFloat) -> Color {
         var uiColor = UIColor(self)
         let comps = uiColor.hsba

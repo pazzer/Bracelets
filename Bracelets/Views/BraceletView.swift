@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct BraceletView: View {
     
     let bracelet: Bracelet

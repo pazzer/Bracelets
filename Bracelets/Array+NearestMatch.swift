@@ -15,6 +15,10 @@ enum MatchRule {
 
 extension Array where Element: Numeric & Comparable {
     
+    /// Returns the index of the array Element closest to `target`. The definition of '
+    /// closest' can is specified via ` matchRule`.
+    ///
+    /// - Warning: self must be sorted in ascending order before calling this method..
     func indexOfNearestMatch(_ target: Element, matchRule: MatchRule) -> Int? {
         guard (self[0]...self[self.count - 1]).contains(target) else { return nil }
         var low = 0
